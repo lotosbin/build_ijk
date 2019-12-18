@@ -31,3 +31,5 @@ RUN ln -fs /bin/bash /bin/sh
 
 WORKDIR /app
 #ENTRYPOINT ./build_ijk.sh
+RUN mkdir /data/
+RUN cp /app/build_ijk.sh /data/ ; cd /data ; ./build_ijk.sh
